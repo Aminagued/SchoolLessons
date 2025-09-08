@@ -1,0 +1,23 @@
+/* pages/Grade.css */
+.grade-page {
+  padding: 2rem 0;
+}
+
+.grade-page h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.grade-description {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
