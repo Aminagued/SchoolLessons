@@ -71,8 +71,13 @@ const Files = () => {
   return (
     <div className="restaurant-menu">
       <header className="menu-header">
-        <h1>Gourmet Delight Restaurant</h1>
-        <p>Explore our delicious offerings</p>
+        <h1>كل ما يخص السنة الرابعة </h1>
+        <div class="search-box">
+          <input type="text" class="search-input" placeholder="ابحث هنا..." />
+          <button class="search-button">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
       </header>
 
       <nav className="menu-nav">
@@ -80,19 +85,31 @@ const Files = () => {
           className={activeCategory === "appetizers" ? "active" : ""}
           onClick={() => setActiveCategory("appetizers")}
         >
-          Appetizers
+          أوراق عمل
         </button>
         <button
           className={activeCategory === "mainCourses" ? "active" : ""}
           onClick={() => setActiveCategory("mainCourses")}
         >
-          Main Courses
+          تمارين
         </button>
         <button
           className={activeCategory === "desserts" ? "active" : ""}
           onClick={() => setActiveCategory("desserts")}
         >
-          Desserts
+          مذكرات
+        </button>
+        <button
+          className={activeCategory === "desserts" ? "active" : ""}
+          onClick={() => setActiveCategory("desserts")}
+        >
+          اختبارات{" "}
+        </button>
+        <button
+          className={activeCategory === "desserts" ? "active" : ""}
+          onClick={() => setActiveCategory("desserts")}
+        >
+          صور توضيحية
         </button>
       </nav>
 
