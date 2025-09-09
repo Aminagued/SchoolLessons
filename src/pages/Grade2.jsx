@@ -1,5 +1,11 @@
+import Files from "../components/Files";
+
 const Grade2 = () => {
-  return <div>Grade2</div>;
+  return (
+    <div>
+      <Files />
+    </div>
+  );
 };
 
 export default Grade2;
