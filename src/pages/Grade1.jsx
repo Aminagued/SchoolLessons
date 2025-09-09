@@ -1,12 +1,15 @@
-// pages/Grade1.jsx
+// src/pages/Grade1.jsx
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import "./Grade.css";
-import ResourceCard from "./ResourceCard.jsx";
+import ResourceCard from "./ResourceCard";
 
 const Grade1 = ({ setActiveLink }) => {
+  const location = useLocation();
+
   useEffect(() => {
     setActiveLink("grade1");
-  }, [setActiveLink]);
+  }, [setActiveLink, location]);
 
   const resources = [
     {

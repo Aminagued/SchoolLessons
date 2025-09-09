@@ -1,4 +1,5 @@
-// components/Header.jsx
+// src/components/Header.jsx
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 const Header = ({ activeLink, setActiveLink }) => {
@@ -12,75 +13,77 @@ const Header = ({ activeLink, setActiveLink }) => {
         <nav className="nav">
           <ul>
             <li>
-              <a
-                href="/grade1"
+              <Link
+                to="/grade1"
                 className={activeLink === "grade1" ? "active" : ""}
                 onClick={() => handleLinkClick("grade1")}
               >
                 السنة الخامسة
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/grade2"
+              <Link
+                to="/grade2"
                 className={activeLink === "grade2" ? "active" : ""}
                 onClick={() => handleLinkClick("grade2")}
               >
                 السنة الرابعة
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/grade3"
+              <Link
+                to="/grade3"
                 className={activeLink === "grade3" ? "active" : ""}
                 onClick={() => handleLinkClick("grade3")}
               >
                 السنة الثالثة
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/grade4"
+              <Link
+                to="/grade4"
                 className={activeLink === "grade4" ? "active" : ""}
                 onClick={() => handleLinkClick("grade4")}
               >
                 السنة الثانية
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/grade5"
+              <Link
+                to="/grade5"
                 className={activeLink === "grade5" ? "active" : ""}
                 onClick={() => handleLinkClick("grade5")}
               >
                 السنة الأولى
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/grade6"
+              <Link
+                to="/grade6"
                 className={activeLink === "grade6" ? "active" : ""}
                 onClick={() => handleLinkClick("grade6")}
               >
                 التحضيري
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/"
+              <Link
+                to="/"
                 className={activeLink === "home" ? "active" : ""}
                 onClick={() => handleLinkClick("home")}
               >
-                الرئسية
-              </a>
+                الرئيسية
+              </Link>
             </li>
           </ul>
         </nav>
-        <div className="logo">
-          <h1>حقيبتي</h1>
-        </div>
         <div className="mobile-menu">
           <span>☰</span>
+        </div>
+        <div className="logo">
+          <Link to="/" onClick={() => handleLinkClick("home")}>
+            <h1>PrimaryClub</h1>
+          </Link>
         </div>
       </div>
     </header>

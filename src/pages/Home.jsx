@@ -1,5 +1,6 @@
-// pages/Home.jsx
+// src/pages/Home.jsx
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./Home.css";
 
 const Home = ({ setActiveLink }) => {
@@ -9,38 +10,40 @@ const Home = ({ setActiveLink }) => {
 
   const gradeLevels = [
     {
-      id: 1,
-      title: "Grade 1",
-      description: "Basic reading, writing, and math fundamentals",
+      id: 4,
+      title: "السنة الثانية",
+      description:
+        "مذكرات متنوعة، تمارين، وأوراق عمل والمزيد من أجل السنة الثانية",
       color: "#FF9E80",
     },
     {
-      id: 2,
-      title: "Grade 2",
-      description: "Building on core skills with more complex concepts",
+      id: 5,
+      title: "السنة الأولى",
+      description:
+        "مذكرات متنوعة، تمارين، وأوراق عمل والمزيد من أجل السنة الأولى",
       color: "#FFCC80",
     },
     {
-      id: 3,
-      title: "Grade 3",
-      description: "Developing reading comprehension and math fluency",
+      id: 6,
+      title: "التحضيري",
+      description: "مذكرات متنوعة، تمارين، وأوراق عمل والمزيد من أجل التحضيري",
       color: "#FFEC80",
     },
     {
-      id: 4,
-      title: "Grade 4",
+      id: 1,
+      title: "السنة الخامسة",
       description: "Expanding knowledge in all subject areas",
       color: "#CCFF90",
     },
     {
-      id: 5,
-      title: "Grade 5",
+      id: 2,
+      title: "السنة الرابعة",
       description: "Preparing for middle school with advanced topics",
       color: "#80FFD4",
     },
     {
-      id: 6,
-      title: "Grade 6",
+      id: 3,
+      title: "السنة الثالثة",
       description: "Bridge year with more specialized subjects",
       color: "#80D0FF",
     },
@@ -50,14 +53,17 @@ const Home = ({ setActiveLink }) => {
     <div className="home">
       <section className="hero">
         <div className="container">
-          <h2>Welcome to Elementary Learning Hub</h2>
-          <p>Explore educational resources for all elementary grade levels</p>
+          <h2>Welcome to PrimaryClub</h2>
+          <p>
+            توفر لكم كل ما تحتاجون طيلة السنة الدراسية، من مذكرات، صور توضيحية،
+            تمارين لجميع المستويات الدراسية الخاصة بالابتدائي.
+          </p>
         </div>
       </section>
 
       <section className="features">
         <div className="container">
-          <h2>Grade Level Resources</h2>
+          <h2>جميع مستويات المرحلة الابتدائية</h2>
           <div className="grade-cards">
             {gradeLevels.map((grade) => (
               <div
@@ -65,11 +71,15 @@ const Home = ({ setActiveLink }) => {
                 className="grade-card"
                 style={{ backgroundColor: grade.color }}
               >
-                <h3>{grade.title}</h3>
-                <p>{grade.description}</p>
-                <a href={`/grade${grade.id}`} className="btn">
-                  Explore Resources
-                </a>
+                <h2>{grade.title}</h2>
+                <h4>{grade.description}</h4>
+                <Link
+                  to={`/grade${grade.id}`}
+                  className="btn"
+                  onClick={() => setActiveLink(`grade${grade.id}`)}
+                >
+                  عرض المزيد
+                </Link>
               </div>
             ))}
           </div>
