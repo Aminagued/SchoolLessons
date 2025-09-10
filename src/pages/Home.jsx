@@ -1,6 +1,7 @@
 // src/pages/Home.jsx
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import ContactForm from "../components/ContactForm";
 import "./Home.css";
 
 const Home = ({ setActiveLink }) => {
@@ -87,14 +88,7 @@ const Home = ({ setActiveLink }) => {
       </section>
 
       <section className="about">
-        <div className="container">
-          <h2>About Our Resources</h2>
-          <p>
-            Our educational materials are designed by experienced elementary
-            teachers to align with curriculum standards. Each resource is
-            crafted to be engaging and effective for young learners.
-          </p>
-        </div>
+        <ContactForm />
       </section>
     </div>
   );

@@ -130,7 +130,7 @@ const Files = () => {
                   className="download-btn"
                   onClick={() => handleDownload(item.file)}
                 >
-                  Download Details
+                  تحميل
                 </button>
               </div>
             </div>
